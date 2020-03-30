@@ -1,0 +1,124 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{71BB85F1-60F8-4271-B5B7-F45EED8E8A25}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>ConsoleApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>dotnet</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".git\config" />
+    <None Include=".git\description" />
+    <None Include=".git\HEAD" />
+    <None Include=".git\hooks\applypatch-msg.sample" />
+    <None Include=".git\hooks\commit-msg.sample" />
+    <None Include=".git\hooks\fsmonitor-watchman.sample" />
+    <None Include=".git\hooks\post-update.sample" />
+    <None Include=".git\hooks\pre-applypatch.sample" />
+    <None Include=".git\hooks\pre-commit.sample" />
+    <None Include=".git\hooks\pre-push.sample" />
+    <None Include=".git\hooks\pre-rebase.sample" />
+    <None Include=".git\hooks\pre-receive.sample" />
+    <None Include=".git\hooks\prepare-commit-msg.sample" />
+    <None Include=".git\hooks\update.sample" />
+    <None Include=".git\index" />
+    <None Include=".git\info\exclude" />
+    <None Include=".git\logs\HEAD" />
+    <None Include=".git\logs\refs\heads\master" />
+    <None Include=".git\logs\refs\remotes\origin\HEAD" />
+    <None Include=".git\objects\pack\pack-538a13ece070cbe6b7caa415ae05e8dbc193a227.idx" />
+    <None Include=".git\objects\pack\pack-538a13ece070cbe6b7caa415ae05e8dbc193a227.pack" />
+    <None Include=".git\packed-refs" />
+    <None Include=".git\refs\heads\master" />
+    <None Include=".git\refs\remotes\origin\HEAD" />
+    <None Include=".vscode\launch.json" />
+    <None Include=".vscode\tasks.json" />
+    <None Include="appsettings.Development.json" />
+    <None Include="appsettings.json" />
+    <None Include="docker-compose.yml" />
+    <None Include="DVCSharp-API.postman_collection.json" />
+    <None Include="README.md" />
+    <None Include="start.sh" />
+    <None Include="test\DVCSharp-Core-API.postman_collection.json" />
+    <None Include="tmp\EMPTY" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\AuthorizationsController.cs" />
+    <Compile Include="Controllers\ImportsController.cs" />
+    <Compile Include="Controllers\PasswordResetsController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\RegistrationsController.cs" />
+    <Compile Include="Controllers\TokensController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="Data\GenericDataContext.cs" />
+    <Compile Include="Migrations\20180427052355_InitialCreate.cs" />
+    <Compile Include="Migrations\20180427052355_InitialCreate.Designer.cs">
+      <DependentUpon>20180427052355_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20180514042927_AddPasswordRestRequest.cs" />
+    <Compile Include="Migrations\20180514042927_AddPasswordRestRequest.Designer.cs">
+      <DependentUpon>20180514042927_AddPasswordRestRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20180515161327_AddProduct.cs" />
+    <Compile Include="Migrations\20180515161327_AddProduct.Designer.cs">
+      <DependentUpon>20180515161327_AddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\GenericDataContextModelSnapshot.cs" />
+    <Compile Include="Models\AuthorizationRequest.cs" />
+    <Compile Include="Models\AuthorizationResponse.cs" />
+    <Compile Include="Models\PasswordResetRequest.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\RegistrationRequest.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserUpdateRequest.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".git\objects\info\" />
+    <Folder Include=".git\refs\tags\" />
+    <Folder Include=".vs\dotnet\v16\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>
