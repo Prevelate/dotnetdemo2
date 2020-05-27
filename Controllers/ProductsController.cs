@@ -11,7 +11,7 @@ using dvcsharp_core_api.Models;
 using dvcsharp_core_api.Data;
 
 //teste
-2
+
     //
 namespace dvcsharp_core_api
 {
@@ -78,8 +78,10 @@ namespace dvcsharp_core_api
 
          return Ok(products);
       }
+        //teste
 
-      [HttpPost("import")]
+        //
+        [HttpPost("import")]
       public IActionResult Import()
       {
          XmlReader reader = XmlReader.Create(HttpContext.Request.Body);
@@ -88,7 +90,7 @@ namespace dvcsharp_core_api
 
          var entities = (Product[]) serializer.Deserialize(reader);
          reader.Close();
-
+          
          return Ok(entities);
       }
    }
