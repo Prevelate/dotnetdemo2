@@ -41,7 +41,7 @@ namespace dvcsharp_core_api
             FirstOrDefault();
          
          if(existingProduct != null) {
-            ModelState.AddModelError("name", "Product name or skuId is already taken");
+            ModelState.AddModelError("name", "Product name2 or skuId is already taken");
             return BadRequest(ModelState);
          }
 
@@ -65,7 +65,7 @@ namespace dvcsharp_core_api
       public IActionResult Search(string keyword)
       {
          if (String.IsNullOrEmpty(keyword)) {
-            return Ok("Cannot search without a keyword");
+            return Ok("124Cannot search without a keyword");
          }
 
          var query = $"SELECT * From Products WHERE name LIKE '%{keyword}%' OR description LIKE '%{keyword}%'";
