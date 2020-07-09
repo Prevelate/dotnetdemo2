@@ -78,7 +78,7 @@ namespace dvcsharp_core_api
 
          return Ok(products);
       }
-        //demo
+        //Demo_Lucas
     
         //
         [HttpPost("import")]
