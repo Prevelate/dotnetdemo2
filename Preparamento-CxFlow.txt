@@ -1,0 +1,25 @@
+CxFlow
+
+O que é?
+
+Como utilizar?
+
+Scan Automatizado através de Commit
+
+Scan Automatizado através de Push
+
+Scan automatizado através de Merge Request
+
+Criptografia de arquivo
+
+Abertura e fechamento automatizado de ticket no Jira através de:
+	- Commit
+	- Push
+	- Merge Request
+Abertura e fechamento de ticket automatizado no GitLab através de:
+	- Commit
+	- Push
+	- Merge Request
+
+Bloqueio automático de Merge entre Branches: Modo WIP
+
