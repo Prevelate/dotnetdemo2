@@ -10,7 +10,7 @@ using Microsoft.Extensions.Logging;
 
 namespace dvcsharp_core_api
 {
-    // just a test 7
+    // just a test 8
     public class Program
     {
         public static void Main(string[] args)
